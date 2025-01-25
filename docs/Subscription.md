@@ -1,4 +1,4 @@
-# SwaggerClient::Subscription
+# Billabear::Subscription
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **valid_until** | **String** |  | [optional] 
 **main_external_reference** | **String** |  | [optional] 
 **child_external_reference** | **String** |  | [optional] 
+**metadata** | **Object** |  | [optional] 
 **price** | [**Price**](Price.md) |  | [optional] 
 **plan** | [**SubscriptionPlan**](SubscriptionPlan.md) |  | [optional] 
 

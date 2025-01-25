@@ -1,4 +1,4 @@
-# SwaggerClient::Invoice
+# Billabear::Invoice
 
 ## Properties
 Name | Type | Description | Notes

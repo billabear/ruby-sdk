@@ -1,4 +1,4 @@
-# SwaggerClient::IssueRefundPayment
+# Billabear::IssueRefundPayment
 
 ## Properties
 Name | Type | Description | Notes

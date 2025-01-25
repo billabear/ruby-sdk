@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionStartBody
+# Billabear::SubscriptionStartBody
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,4 +11,5 @@ Name | Type | Description | Notes
 **currency** | **String** | The currency of the plan that is to be started. Only used if price isn&#x27;t given. Requires schedule as well. | [optional] 
 **seat_numbrers** | **Integer** |  | [optional] 
 **deny_trial** | [**Bool**](Bool.md) |  | [optional] 
+**metadata** | **Object** | Any metadata you want to add to a subscription | [optional] 
 

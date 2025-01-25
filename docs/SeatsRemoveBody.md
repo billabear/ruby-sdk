@@ -1,4 +1,4 @@
-# SwaggerClient::SeatsRemoveBody
+# Billabear::SeatsRemoveBody
 
 ## Properties
 Name | Type | Description | Notes

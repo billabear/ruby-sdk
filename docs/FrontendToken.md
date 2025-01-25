@@ -1,4 +1,4 @@
-# SwaggerClient::FrontendToken
+# Billabear::FrontendToken
 
 ## Properties
 Name | Type | Description | Notes

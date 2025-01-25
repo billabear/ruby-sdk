@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionIdCancelBody
+# Billabear::SubscriptionIdCancelBody
 
 ## Properties
 Name | Type | Description | Notes

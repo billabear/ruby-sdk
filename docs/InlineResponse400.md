@@ -1,4 +1,4 @@
-# SwaggerClient::InlineResponse400
+# Billabear::InlineResponse400
 
 ## Properties
 Name | Type | Description | Notes

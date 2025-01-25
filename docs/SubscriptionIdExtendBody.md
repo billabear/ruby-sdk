@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionIdExtendBody
+# Billabear::SubscriptionIdExtendBody
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::ProductTaxType
+# Billabear::ProductTaxType
 
 ## Properties
 Name | Type | Description | Notes

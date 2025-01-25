@@ -1,9 +1,9 @@
-# SwaggerClient::InlineResponse2002
+# Billabear::InlineResponse2002
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;Refund&gt;**](Refund.md) |  | [optional] 
-**has_more** | **BOOLEAN** |  | [optional] 
-**last_key** | **String** |  | [optional] 
+**limits** | [**Array&lt;Limit&gt;**](Limit.md) |  | [optional] 
+**features** | [**Array&lt;Feature&gt;**](Feature.md) |  | [optional] 
+**user_count** | **Integer** |  | [optional] 
 

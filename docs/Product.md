@@ -1,4 +1,4 @@
-# SwaggerClient::Product
+# Billabear::Product
 
 ## Properties
 Name | Type | Description | Notes

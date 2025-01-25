@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionIdPriceBody
+# Billabear::SubscriptionIdPriceBody
 
 ## Properties
 Name | Type | Description | Notes

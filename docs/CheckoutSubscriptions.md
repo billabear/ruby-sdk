@@ -1,4 +1,4 @@
-# SwaggerClient::CheckoutSubscriptions
+# Billabear::CheckoutSubscriptions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::VoucherCode
+# Billabear::VoucherCode
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentsApi
+# Billabear::PaymentsApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**refund_payment**](PaymentsApi.md#refund_payment) | **POST** /payment/{paymentId}/refund | Refund Payment
 
 # **charge_invoice**
-> InlineResponse20012 charge_invoice(invoice_id)
+> InlineResponse20014 charge_invoice(invoice_id)
 
 Charge Invoice
 
@@ -22,16 +22,16 @@ Attempts to charge a card that is on file for the invoice amount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Billabear::PaymentsApi.new
 invoice_id = 'invoice_id_example' # String | The id of the invoice
 
 
@@ -39,7 +39,7 @@ begin
   #Charge Invoice
   result = api_instance.charge_invoice(invoice_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->charge_invoice: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -75,16 +75,16 @@ Returns the pdf blob for the invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Billabear::PaymentsApi.new
 invoice_id = 'invoice_id_example' # String | The id of the invoice
 
 
@@ -92,7 +92,7 @@ begin
   #Download Invoice
   result = api_instance.download_invoice(invoice_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->download_invoice: #{e}"
 end
 ```
@@ -128,16 +128,16 @@ Returns the pdf blob for the Receipt
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Billabear::PaymentsApi.new
 receipt = 'receipt_example' # String | The id of the receipt
 
 
@@ -145,7 +145,7 @@ begin
   #Download Receipt
   result = api_instance.download_receipt(receipt)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->download_receipt: #{e}"
 end
 ```
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 
 # **get_invoices_for_customer**
-> InlineResponse2004 get_invoices_for_customer(customer_id)
+> InlineResponse2006 get_invoices_for_customer(customer_id)
 
 List Customer Invoices
 
@@ -181,16 +181,16 @@ List Customer Invoices
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Billabear::PaymentsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -198,7 +198,7 @@ begin
   #List Customer Invoices
   result = api_instance.get_invoices_for_customer(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->get_invoices_for_customer: #{e}"
 end
 ```
@@ -208,6 +208,66 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customer_id** | **String**| The id of the customer to retrieve | 
+
+### Return type
+
+[**InlineResponse2006**](InlineResponse2006.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_payments_for_customer**
+> InlineResponse2004 get_payments_for_customer(customer_id, opts)
+
+List Customer Payments
+
+List Customer Payment
+
+### Example
+```ruby
+# load the gem
+require 'billabear'
+# setup authorization
+Billabear.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['X-API-Key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['X-API-Key'] = 'Bearer'
+end
+
+api_instance = Billabear::PaymentsApi.new
+customer_id = 'customer_id_example' # String | The id of the customer to retrieve
+opts = { 
+  limit: 56, # Integer | How many items to return at one time (max 100)
+  last_key: 'last_key_example', # String | The key to be used in pagination to say what the last key of the previous page was
+  name: 'name_example' # String | The name to search for
+}
+
+begin
+  #List Customer Payments
+  result = api_instance.get_payments_for_customer(customer_id, opts)
+  p result
+rescue Billabear::ApiError => e
+  puts "Exception when calling PaymentsApi->get_payments_for_customer: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **customer_id** | **String**| The id of the customer to retrieve | 
+ **limit** | **Integer**| How many items to return at one time (max 100) | [optional] 
+ **last_key** | **String**| The key to be used in pagination to say what the last key of the previous page was | [optional] 
+ **name** | **String**| The name to search for | [optional] 
 
 ### Return type
 
@@ -224,68 +284,8 @@ Name | Type | Description  | Notes
 
 
 
-# **get_payments_for_customer**
-> InlineResponse2003 get_payments_for_customer(customer_id, opts)
-
-List Customer Payments
-
-List Customer Payment
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: ApiKeyAuth
-  config.api_key['X-API-Key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['X-API-Key'] = 'Bearer'
-end
-
-api_instance = SwaggerClient::PaymentsApi.new
-customer_id = 'customer_id_example' # String | The id of the customer to retrieve
-opts = { 
-  limit: 56, # Integer | How many items to return at one time (max 100)
-  last_key: 'last_key_example', # String | The key to be used in pagination to say what the last key of the previous page was
-  name: 'name_example' # String | The name to search for
-}
-
-begin
-  #List Customer Payments
-  result = api_instance.get_payments_for_customer(customer_id, opts)
-  p result
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PaymentsApi->get_payments_for_customer: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customer_id** | **String**| The id of the customer to retrieve | 
- **limit** | **Integer**| How many items to return at one time (max 100) | [optional] 
- **last_key** | **String**| The key to be used in pagination to say what the last key of the previous page was | [optional] 
- **name** | **String**| The name to search for | [optional] 
-
-### Return type
-
-[**InlineResponse2003**](InlineResponse2003.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
 # **list_payment**
-> InlineResponse2007 list_payment(opts)
+> InlineResponse2009 list_payment(opts)
 
 List
 
@@ -294,16 +294,16 @@ List all payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
+api_instance = Billabear::PaymentsApi.new
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
   last_key: 'last_key_example', # String | The key to be used in pagination to say what the last key of the previous page was
@@ -314,7 +314,7 @@ begin
   #List
   result = api_instance.list_payment(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->list_payment: #{e}"
 end
 ```
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 
 # **refund_payment**
-> String refund_payment(bodypayment_id)
+> refund_payment(bodypayment_id)
 
 Refund Payment
 
@@ -352,25 +352,24 @@ Issue a refund for payment
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentsApi.new
-body = SwaggerClient::IssueRefundPayment.new # IssueRefundPayment | 
+api_instance = Billabear::PaymentsApi.new
+body = Billabear::IssueRefundPayment.new # IssueRefundPayment | 
 payment_id = 'payment_id_example' # String | The id of the payment
 
 
 begin
   #Refund Payment
-  result = api_instance.refund_payment(bodypayment_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.refund_payment(bodypayment_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentsApi->refund_payment: #{e}"
 end
 ```
@@ -384,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 

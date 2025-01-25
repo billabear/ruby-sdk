@@ -1,4 +1,4 @@
-# SwaggerClient::Customer
+# Billabear::Customer
 
 ## Properties
 Name | Type | Description | Notes
@@ -15,4 +15,6 @@ Name | Type | Description | Notes
 **address** | [**Address**](Address.md) |  | [optional] 
 **locale** | **String** | Defaults to &#x27;en&#x27; if not sent. | [optional] 
 **brand** | **String** | Defaults to &#x27;default&#x27; if not sent. | [optional] 
+**invoice_format** | **String** | Choice between &#x27;pdf&#x27; and &#x27;xrechnung&#x27;. &lt;strong&gt;Since 2024.02.01&lt;/strong&gt; | [optional] 
+**marketing_opt_in** | **BOOLEAN** | If the customer has opted in for marketing | [optional] 
 

@@ -1,4 +1,4 @@
-# SwaggerClient::Address
+# Billabear::Address
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SwaggerClient::Error
+# Billabear::Error
 
 ## Properties
 Name | Type | Description | Notes

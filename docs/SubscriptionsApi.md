@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionsApi
+# Billabear::SubscriptionsApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**start_trial**](SubscriptionsApi.md#start_trial) | **POST** /customer/{customerId}/subscription/trial | Start Trial Subscription For Customer
 
 # **add_seats_subscriptions**
-> InlineResponse20011 add_seats_subscriptions(bodysubscription_id)
+> InlineResponse20013 add_seats_subscriptions(bodysubscription_id)
 
 Add Seats
 
@@ -28,17 +28,17 @@ Adds seats to a per seat subscription<br><br><strong>Since 1.1.4</strong>
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SeatsAddBody.new # SeatsAddBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SeatsAddBody.new # SeatsAddBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -46,7 +46,7 @@ begin
   #Add Seats
   result = api_instance.add_seats_subscriptions(bodysubscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->add_seats_subscriptions: #{e}"
 end
 ```
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 
 # **cancel_subscription**
-> String cancel_subscription(bodysubscription_id)
+> cancel_subscription(bodysubscription_id)
 
 Cancel Subscription
 
@@ -83,25 +83,24 @@ Info for a specific subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionIdCancelBody.new # SubscriptionIdCancelBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionIdCancelBody.new # SubscriptionIdCancelBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
 begin
   #Cancel Subscription
-  result = api_instance.cancel_subscription(bodysubscription_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.cancel_subscription(bodysubscription_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->cancel_subscription: #{e}"
 end
 ```
@@ -115,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -129,7 +128,7 @@ Name | Type | Description  | Notes
 
 
 # **change_subscription_price**
-> InlineResponse20011 change_subscription_price(bodysubscription_id)
+> InlineResponse20013 change_subscription_price(bodysubscription_id)
 
 Change Price
 
@@ -138,17 +137,17 @@ Changes the price being used for a price. Useful for changing pricing schedule o
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionIdPriceBody.new # SubscriptionIdPriceBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionIdPriceBody.new # SubscriptionIdPriceBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -156,7 +155,7 @@ begin
   #Change Price
   result = api_instance.change_subscription_price(bodysubscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->change_subscription_price: #{e}"
 end
 ```
@@ -170,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -193,17 +192,17 @@ Create subscription for a customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionStartBody.new # SubscriptionStartBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionStartBody.new # SubscriptionStartBody | 
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -211,7 +210,7 @@ begin
   #Create Subscription
   result = api_instance.create_subscription(bodycustomer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->create_subscription: #{e}"
 end
 ```
@@ -248,17 +247,17 @@ Change the subscription plan for a customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionIdPlanBody.new # SubscriptionIdPlanBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionIdPlanBody.new # SubscriptionIdPlanBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -266,7 +265,7 @@ begin
   #Change Subscription Plan
   result = api_instance.customer_change_subscription_plan(bodysubscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->customer_change_subscription_plan: #{e}"
 end
 ```
@@ -303,17 +302,17 @@ Extend a trial subscription so it's converted from a trial to a normal subscript
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionIdExtendBody.new # SubscriptionIdExtendBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionIdExtendBody.new # SubscriptionIdExtendBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -321,7 +320,7 @@ begin
   #Extend Trial Subscription
   result = api_instance.extend_trial(bodysubscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->extend_trial: #{e}"
 end
 ```
@@ -349,7 +348,7 @@ Name | Type | Description  | Notes
 
 
 # **get_active_for_customer**
-> InlineResponse2006 get_active_for_customer(customer_id)
+> InlineResponse2008 get_active_for_customer(customer_id)
 
 List Customer Active Subscriptions
 
@@ -358,16 +357,16 @@ List all Active customer subscriptions
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Billabear::SubscriptionsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -375,7 +374,7 @@ begin
   #List Customer Active Subscriptions
   result = api_instance.get_active_for_customer(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->get_active_for_customer: #{e}"
 end
 ```
@@ -388,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -402,7 +401,7 @@ Name | Type | Description  | Notes
 
 
 # **get_for_customer**
-> InlineResponse2006 get_for_customer(customer_id)
+> InlineResponse2008 get_for_customer(customer_id)
 
 List Customer Subscriptions
 
@@ -411,16 +410,16 @@ List all customer subscriptions<br><br><strong>Since 1.1</strong>
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Billabear::SubscriptionsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -428,7 +427,7 @@ begin
   #List Customer Subscriptions
   result = api_instance.get_for_customer(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->get_for_customer: #{e}"
 end
 ```
@@ -441,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -455,7 +454,7 @@ Name | Type | Description  | Notes
 
 
 # **list_subscription_plans**
-> InlineResponse20010 list_subscription_plans(opts)
+> InlineResponse20012 list_subscription_plans(opts)
 
 List Subscription Plans
 
@@ -464,16 +463,16 @@ List all subscriptions plans
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Billabear::SubscriptionsApi.new
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
   last_key: 'last_key_example' # String | The key to be used in pagination to say what the last key of the previous page was
@@ -483,7 +482,7 @@ begin
   #List Subscription Plans
   result = api_instance.list_subscription_plans(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->list_subscription_plans: #{e}"
 end
 ```
@@ -497,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -511,7 +510,7 @@ Name | Type | Description  | Notes
 
 
 # **list_subscriptions**
-> InlineResponse2006 list_subscriptions(opts)
+> InlineResponse2008 list_subscriptions(opts)
 
 List
 
@@ -520,16 +519,16 @@ List all subscriptions
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Billabear::SubscriptionsApi.new
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
   last_key: 'last_key_example' # String | The key to be used in pagination to say what the last key of the previous page was
@@ -539,7 +538,7 @@ begin
   #List
   result = api_instance.list_subscriptions(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->list_subscriptions: #{e}"
 end
 ```
@@ -553,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -567,7 +566,7 @@ Name | Type | Description  | Notes
 
 
 # **remove_seats_subscriptions**
-> InlineResponse20011 remove_seats_subscriptions(bodysubscription_id)
+> InlineResponse20013 remove_seats_subscriptions(bodysubscription_id)
 
 Remove Seats
 
@@ -576,17 +575,17 @@ Remove seats to a per seat subscription<br><br><strong>Since 1.1.4</strong>
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SeatsRemoveBody.new # SeatsRemoveBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SeatsRemoveBody.new # SeatsRemoveBody | 
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -594,7 +593,7 @@ begin
   #Remove Seats
   result = api_instance.remove_seats_subscriptions(bodysubscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->remove_seats_subscriptions: #{e}"
 end
 ```
@@ -608,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -631,16 +630,16 @@ Info for a specific subscription
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
+api_instance = Billabear::SubscriptionsApi.new
 subscription_id = 'subscription_id_example' # String | The id of the subscription to retrieve
 
 
@@ -648,7 +647,7 @@ begin
   #Detail
   result = api_instance.show_subscription_by_id(subscription_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->show_subscription_by_id: #{e}"
 end
 ```
@@ -684,17 +683,17 @@ Start subscription for a customer
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::SubscriptionsApi.new
-body = SwaggerClient::SubscriptionTrialBody.new # SubscriptionTrialBody | 
+api_instance = Billabear::SubscriptionsApi.new
+body = Billabear::SubscriptionTrialBody.new # SubscriptionTrialBody | 
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -702,7 +701,7 @@ begin
   #Start Trial Subscription For Customer
   result = api_instance.start_trial(bodycustomer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling SubscriptionsApi->start_trial: #{e}"
 end
 ```

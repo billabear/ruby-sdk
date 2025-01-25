@@ -1,9 +1,9 @@
-# SwaggerClient::InlineResponse2004
+# Billabear::InlineResponse2004
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;Invoice&gt;**](Invoice.md) |  | [optional] 
+**data** | [**Array&lt;Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems&gt;**](Paths1paymentgetresponses200contentapplication1jsonschemapropertiesdataitems.md) |  | [optional] 
 **has_more** | **BOOLEAN** |  | [optional] 
 **last_key** | **String** |  | [optional] 
 

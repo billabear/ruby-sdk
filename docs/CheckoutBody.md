@@ -1,4 +1,4 @@
-# SwaggerClient::CheckoutBody
+# Billabear::CheckoutBody
 
 ## Properties
 Name | Type | Description | Notes

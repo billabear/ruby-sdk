@@ -1,4 +1,4 @@
-# SwaggerClient::ProductsApi
+# Billabear::ProductsApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**update_product**](ProductsApi.md#update_product) | **PUT** /product/{productId} | Update
 
 # **create_product**
-> String create_product(body)
+> create_product(body)
 
 Create
 
@@ -19,24 +19,23 @@ Create a product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ProductsApi.new
-body = SwaggerClient::Product.new # Product | 
+api_instance = Billabear::ProductsApi.new
+body = Billabear::Product.new # Product | 
 
 
 begin
   #Create
-  result = api_instance.create_product(body)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.create_product(body)
+rescue Billabear::ApiError => e
   puts "Exception when calling ProductsApi->create_product: #{e}"
 end
 ```
@@ -49,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -63,7 +62,7 @@ Name | Type | Description  | Notes
 
 
 # **list_product**
-> InlineResponse2008 list_product(opts)
+> InlineResponse20010 list_product(opts)
 
 List
 
@@ -72,16 +71,16 @@ List all products
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Billabear::ProductsApi.new
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
   last_key: 'last_key_example', # String | The key to be used in pagination to say what the last key of the previous page was
@@ -92,7 +91,7 @@ begin
   #List
   result = api_instance.list_product(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling ProductsApi->list_product: #{e}"
 end
 ```
@@ -107,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -130,16 +129,16 @@ Info for a specific product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Billabear::ProductsApi.new
 product_id = 'product_id_example' # String | The id of the product to retrieve
 
 
@@ -147,7 +146,7 @@ begin
   #Detail
   result = api_instance.show_product_by_id(product_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling ProductsApi->show_product_by_id: #{e}"
 end
 ```
@@ -183,16 +182,16 @@ Update a product
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::ProductsApi.new
+api_instance = Billabear::ProductsApi.new
 product_id = 'product_id_example' # String | The id of the product to retrieve
 
 
@@ -200,7 +199,7 @@ begin
   #Update
   result = api_instance.update_product(product_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling ProductsApi->update_product: #{e}"
 end
 ```

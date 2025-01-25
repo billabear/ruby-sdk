@@ -1,4 +1,4 @@
-# SwaggerClient::InvoicesApi
+# Billabear::InvoicesApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**get_invoices_for_customer**](InvoicesApi.md#get_invoices_for_customer) | **GET** /customer/{customerId}/invoices | List Customer Invoices
 
 # **charge_invoice**
-> InlineResponse20012 charge_invoice(invoice_id)
+> InlineResponse20014 charge_invoice(invoice_id)
 
 Charge Invoice
 
@@ -18,16 +18,16 @@ Attempts to charge a card that is on file for the invoice amount
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Billabear::InvoicesApi.new
 invoice_id = 'invoice_id_example' # String | The id of the invoice
 
 
@@ -35,7 +35,7 @@ begin
   #Charge Invoice
   result = api_instance.charge_invoice(invoice_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling InvoicesApi->charge_invoice: #{e}"
 end
 ```
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -71,16 +71,16 @@ Returns the pdf blob for the invoice
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Billabear::InvoicesApi.new
 invoice_id = 'invoice_id_example' # String | The id of the invoice
 
 
@@ -88,7 +88,7 @@ begin
   #Download Invoice
   result = api_instance.download_invoice(invoice_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling InvoicesApi->download_invoice: #{e}"
 end
 ```
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 
 # **get_invoices_for_customer**
-> InlineResponse2004 get_invoices_for_customer(customer_id)
+> InlineResponse2006 get_invoices_for_customer(customer_id)
 
 List Customer Invoices
 
@@ -124,16 +124,16 @@ List Customer Invoices
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::InvoicesApi.new
+api_instance = Billabear::InvoicesApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -141,7 +141,7 @@ begin
   #List Customer Invoices
   result = api_instance.get_invoices_for_customer(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling InvoicesApi->get_invoices_for_customer: #{e}"
 end
 ```
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 

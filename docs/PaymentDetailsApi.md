@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentDetailsApi
+# Billabear::PaymentDetailsApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -23,17 +23,17 @@ Complete frontend payment details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
-body = SwaggerClient::FrontendToken.new # FrontendToken | 
+api_instance = Billabear::PaymentDetailsApi.new
+body = Billabear::FrontendToken.new # FrontendToken | 
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -41,7 +41,7 @@ begin
   #Complete Frontend Detail Collection
   result = api_instance.complete_frontend_payment_details(bodycustomer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->complete_frontend_payment_details: #{e}"
 end
 ```
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_payment_details**
-> String delete_payment_details(payment_details_id)
+> delete_payment_details(payment_details_id)
 
 Delete
 
@@ -78,24 +78,23 @@ Delete Payment Details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 payment_details_id = 'payment_details_id_example' # String | The id of the payment details
 
 
 begin
   #Delete
-  result = api_instance.delete_payment_details(payment_details_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.delete_payment_details(payment_details_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->delete_payment_details: #{e}"
 end
 ```
@@ -108,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -122,7 +121,7 @@ Name | Type | Description  | Notes
 
 
 # **delete_payment_details_customer**
-> String delete_payment_details_customer(customer_id, payment_details_id)
+> delete_payment_details_customer(customer_id, payment_details_id)
 
 Delete With Customer
 
@@ -131,25 +130,24 @@ Delete Payment Details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 payment_details_id = 'payment_details_id_example' # String | The id of the payment details
 
 
 begin
   #Delete With Customer
-  result = api_instance.delete_payment_details_customer(customer_id, payment_details_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.delete_payment_details_customer(customer_id, payment_details_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->delete_payment_details_customer: #{e}"
 end
 ```
@@ -163,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -186,16 +184,16 @@ Fetch the payment cards
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 payment_details_id = 'payment_details_id_example' # String | The id of the payment details
 
 
@@ -203,7 +201,7 @@ begin
   #Fetch
   result = api_instance.get_payment_details(payment_details_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->get_payment_details: #{e}"
 end
 ```
@@ -230,7 +228,7 @@ Name | Type | Description  | Notes
 
 
 # **list_payment_details**
-> InlineResponse2005 list_payment_details(customer_id)
+> InlineResponse2007 list_payment_details(customer_id)
 
 List Customer's Payment Details
 
@@ -239,16 +237,16 @@ List all customers <br><br>Added in version 1.1
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -256,7 +254,7 @@ begin
   #List Customer's Payment Details
   result = api_instance.list_payment_details(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->list_payment_details: #{e}"
 end
 ```
@@ -269,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -283,7 +281,7 @@ Name | Type | Description  | Notes
 
 
 # **make_default_payment_details**
-> String make_default_payment_details(customer_id, payment_details_id)
+> make_default_payment_details(customer_id, payment_details_id)
 
 Make Default
 
@@ -292,25 +290,24 @@ Delete Payment Details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 payment_details_id = 'payment_details_id_example' # String | The id of the payment details
 
 
 begin
   #Make Default
-  result = api_instance.make_default_payment_details(customer_id, payment_details_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.make_default_payment_details(customer_id, payment_details_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->make_default_payment_details: #{e}"
 end
 ```
@@ -324,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -338,7 +335,7 @@ Name | Type | Description  | Notes
 
 
 # **make_default_payment_details_customer**
-> String make_default_payment_details_customer(customer_id, payment_details_id)
+> make_default_payment_details_customer(customer_id, payment_details_id)
 
 Make Default With Customer
 
@@ -347,25 +344,24 @@ Delete Payment Details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 payment_details_id = 'payment_details_id_example' # String | The id of the payment details
 
 
 begin
   #Make Default With Customer
-  result = api_instance.make_default_payment_details_customer(customer_id, payment_details_id)
-  p result
-rescue SwaggerClient::ApiError => e
+  api_instance.make_default_payment_details_customer(customer_id, payment_details_id)
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->make_default_payment_details_customer: #{e}"
 end
 ```
@@ -379,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
@@ -402,16 +398,16 @@ Start frontend payment details
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::PaymentDetailsApi.new
+api_instance = Billabear::PaymentDetailsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 
 
@@ -419,7 +415,7 @@ begin
   #Start Frontend Detail Collection
   result = api_instance.start_frontend_payment_details(customer_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling PaymentDetailsApi->start_frontend_payment_details: #{e}"
 end
 ```

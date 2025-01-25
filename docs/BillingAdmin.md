@@ -1,4 +1,4 @@
-# SwaggerClient::BillingAdmin
+# Billabear::BillingAdmin
 
 ## Properties
 Name | Type | Description | Notes

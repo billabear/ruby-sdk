@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentDetails
+# Billabear::PaymentDetails
 
 ## Properties
 Name | Type | Description | Notes

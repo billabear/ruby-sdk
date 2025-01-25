@@ -1,9 +1,9 @@
-# SwaggerClient::InlineResponse2006
+# Billabear::InlineResponse2006
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**Array&lt;Subscription&gt;**](Subscription.md) |  | [optional] 
+**data** | [**Array&lt;Invoice&gt;**](Invoice.md) |  | [optional] 
 **has_more** | **BOOLEAN** |  | [optional] 
 **last_key** | **String** |  | [optional] 
 

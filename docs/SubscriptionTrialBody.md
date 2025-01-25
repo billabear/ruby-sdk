@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionTrialBody
+# Billabear::SubscriptionTrialBody
 
 ## Properties
 Name | Type | Description | Notes

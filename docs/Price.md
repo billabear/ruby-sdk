@@ -1,4 +1,4 @@
-# SwaggerClient::Price
+# Billabear::Price
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,4 +11,5 @@ Name | Type | Description | Notes
 **schedule** | **String** | Required if recurring is true | [optional] 
 **including_tax** | **BOOLEAN** | If the price is including tax. If false tax will be added on top of the price. | [optional] 
 **public** | **BOOLEAN** |  | [optional] 
+**metric** | [**Metric**](Metric.md) |  | [optional] 
 

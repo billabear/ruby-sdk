@@ -1,4 +1,4 @@
-# SwaggerClient::RefundsApi
+# Billabear::RefundsApi
 
 All URIs are relative to *https://{customerId}.billabear.cloud/api/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**show_refund_by_id**](RefundsApi.md#show_refund_by_id) | **GET** /refund/{refundId} | Detail
 
 # **get_refunds_for_customer**
-> InlineResponse2002 get_refunds_for_customer(customer_id, opts)
+> InlineResponse2003 get_refunds_for_customer(customer_id, opts)
 
 List Customer Refunds
 
@@ -18,16 +18,16 @@ List Customer Refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Billabear::RefundsApi.new
 customer_id = 'customer_id_example' # String | The id of the customer to retrieve
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
@@ -39,7 +39,7 @@ begin
   #List Customer Refunds
   result = api_instance.get_refunds_for_customer(customer_id, opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling RefundsApi->get_refunds_for_customer: #{e}"
 end
 ```
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 
 # **list_refund**
-> InlineResponse2002 list_refund(opts)
+> InlineResponse2003 list_refund(opts)
 
 List
 
@@ -78,16 +78,16 @@ List all refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Billabear::RefundsApi.new
 opts = { 
   limit: 56, # Integer | How many items to return at one time (max 100)
   last_key: 'last_key_example', # String | The key to be used in pagination to say what the last key of the previous page was
@@ -98,7 +98,7 @@ begin
   #List
   result = api_instance.list_refund(opts)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling RefundsApi->list_refund: #{e}"
 end
 ```
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -136,16 +136,16 @@ Info for a specific Refund
 ### Example
 ```ruby
 # load the gem
-require 'swagger_client'
+require 'billabear'
 # setup authorization
-SwaggerClient.configure do |config|
+Billabear.configure do |config|
   # Configure API key authorization: ApiKeyAuth
   config.api_key['X-API-Key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['X-API-Key'] = 'Bearer'
 end
 
-api_instance = SwaggerClient::RefundsApi.new
+api_instance = Billabear::RefundsApi.new
 refund_id = 'refund_id_example' # String | The id of the refund
 
 
@@ -153,7 +153,7 @@ begin
   #Detail
   result = api_instance.show_refund_by_id(refund_id)
   p result
-rescue SwaggerClient::ApiError => e
+rescue Billabear::ApiError => e
   puts "Exception when calling RefundsApi->show_refund_by_id: #{e}"
 end
 ```

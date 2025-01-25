@@ -1,4 +1,4 @@
-# SwaggerClient::SubscriptionPlan
+# Billabear::SubscriptionPlan
 
 ## Properties
 Name | Type | Description | Notes

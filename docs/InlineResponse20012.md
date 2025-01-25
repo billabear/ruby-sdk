@@ -1,8 +1,9 @@
-# SwaggerClient::InlineResponse20012
+# Billabear::InlineResponse20012
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**paid** | **BOOLEAN** |  | [optional] 
-**failure_reason** | **String** |  | [optional] 
+**data** | [**Array&lt;SubscriptionPlan&gt;**](SubscriptionPlan.md) |  | [optional] 
+**has_more** | **BOOLEAN** |  | [optional] 
+**last_key** | **String** |  | [optional] 
 

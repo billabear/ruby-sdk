@@ -1,4 +1,4 @@
-# SwaggerClient::Feature
+# Billabear::Feature
 
 ## Properties
 Name | Type | Description | Notes

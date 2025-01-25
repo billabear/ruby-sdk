@@ -1,7 +1,9 @@
-# SwaggerClient::InlineResponse20011
+# Billabear::InlineResponse20011
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **BOOLEAN** |  | [optional] 
+**data** | [**Array&lt;Price&gt;**](Price.md) |  | [optional] 
+**has_more** | **BOOLEAN** |  | [optional] 
+**last_key** | **String** |  | [optional] 
 
